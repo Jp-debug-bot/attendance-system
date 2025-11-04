@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Student Attendance System</h1>
+    </header>
+    
+    <main>
+        <section id="attendance-form">
+            <h2>Mark Attendance</h2>
+            <form id="attendanceForm">
+                <label for="student-name">Student Name:</label>
+                <input type="text" id="student-name" required>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+                
+                <label for="status">Status:</label>
+                <select id="status" required>
+                    <option value="present">Present</option>
+                    <option value="absent">Absent</option>
+                </select>
+                
+                <button type="submit">Add Record</button>
+            </form>
+        </section>
+        
+        <section id="attendance-records">
+            <h2>Attendance Records</h2>
+            <button id="clearRecords">Clear All Records</button>
+            <table id="recordsTable">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Records will be loaded here -->
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>Total Records: <span id="totalRecords">0</span></p>
+            <p>Present: <span id="presentCount">0</span></p>
+            <p>Absent: <span id="absentCount">0</span></p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Attendance System.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
